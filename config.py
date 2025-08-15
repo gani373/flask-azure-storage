@@ -8,7 +8,7 @@ class Config(object):
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'hello'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityuser'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Udacity@1234'
-    S SQLALCHEMY_DATABASE_URI = (
+    SQLALCHEMY_DATABASE_URI = (
         f"mssql+pyodbc://{SQL_USER_NAME}:{SQL_PASSWORD}@{SQL_SERVER}:1433/{SQL_DATABASE}"
         "?driver=ODBC+Driver+17+for+SQL+Server"
     )
