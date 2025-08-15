@@ -8,9 +8,11 @@ class Config(object):
     SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'hello'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityuser'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'Udacity@1234'
-    SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE + '?driver=ODBC+Driver+17+for+SQL+Server'
+    S SQLALCHEMY_DATABASE_URI = (
+        f"mssql+pyodbc://{SQL_USER_NAME}:{SQL_PASSWORD}@{SQL_SERVER}:1433/{SQL_DATABASE}"
+        "?driver=ODBC+Driver+17+for+SQL+Server"
+    )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'hellowo123'
     BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'bwC9rXbhvcbHUbHOD4RrWXChBDxEQ0qBkGguUjjz44R+SF73o69Kamhk+qtqOQKTfxCVW/xrSpBn+AStvZLVdg=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
